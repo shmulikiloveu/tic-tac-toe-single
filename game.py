@@ -1,4 +1,5 @@
 import pygame
+import subprocess
 
 from const import *
 from board import Board
@@ -7,6 +8,8 @@ from board import Board
 class Game:
 
     def __init__(self, ultimate=False, max=False):
+        subprocess.Popen(["python", "client.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                         stdin=subprocess.PIPE, close_fds=True)
         self.ultimate = ultimate
         self.max = max
         self.board = Board(ultimate=ultimate, max=max)

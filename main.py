@@ -1,13 +1,13 @@
 import pygame
 import sys
-
 from const import *
 from game import Game
+
 
 class Main:
 
     def __init__(self):
-        self.screen = pygame.display.set_mode( (WIDTH, HEIGHT) )
+        self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption('ULTIMATE TIC TAC TOE')
         self.game = Game(ultimate=True, max=True)
 
@@ -16,7 +16,7 @@ class Main:
         screen = self.screen
         game = self.game
 
-        self.screen.fill( BG_COLOR )
+        self.screen.fill(BG_COLOR)
         game.render_board(screen)
 
         while True:
@@ -43,7 +43,7 @@ class Main:
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_r:
                         game.restart()
-                        self.screen.fill( BG_COLOR )
+                        self.screen.fill(BG_COLOR)
                         game.render_board(screen)
 
                 # quit

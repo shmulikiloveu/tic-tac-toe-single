@@ -1,4 +1,4 @@
-WIDTH = 729 # 3^6
+WIDTH = 729  # 3^6
 HEIGHT = 729
 
 BG_COLOR = (28, 170, 156)

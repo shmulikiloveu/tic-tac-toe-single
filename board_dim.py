@@ -1,5 +1,6 @@
 from const import *
 
+
 class BoardDim:
 
     def __init__(self, size, xcor, ycor):
